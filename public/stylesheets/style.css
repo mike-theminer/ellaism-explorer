@@ -1,0 +1,74 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #097b27;
+}
+a:hover{
+    color: #65a56d;
+}
+
+.capitalize {
+  text-transform:capitalize;
+}
+
+pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.parameter-cell {
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+.table td.fit,
+.table th.fit {
+    white-space: nowrap;
+    width: 1%;
+}
+.space-right{
+margin-right: 4pt;
+}
+.space-left{
+margin-left: 10pt;
+}
+.table-fit {
+  width: 1px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #138c17;
+}
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #65a56d;
+}
+.btn-default {
+    color: #0a6b1a;
+}
+.well {
+  background-color: #e9f5e6;
+  border: 1px solid #4a804e;
+}
+
+.dropdown-menu>li>a {
+    color: #097b27;
+}
+.dropdown-menu>li>a:hover{
+    color: #65a56d;
+}
+
+.table>thead>tr>th {
+    background-color: #d5e4d3;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #286519;
+}

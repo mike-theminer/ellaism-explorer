@@ -1,0 +1,106 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+
+    meta(name='description', content='The explorer for the Ellaism blockchain')
+    meta(name='author', content='mike')
+    meta(name='keywords', content='ethereum, explorer, blockchain, Ellaism , Ella,  etherchain, cryptocurrency, cryptocurrencies, bitcoin')
+
+    title Ellaism Block Explorer
+    link(rel='icon', type="image/png", href='/favicon.png')
+    link(href=config.bootstrapUrl, rel="stylesheet", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(async,src="https://www.googletagmanager.com/gtag/js?id=UA-111639102-2")
+    script(src='/js/analytics.js')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://files.coinmarketcap.com/static/widget/currency.js")
+    script(src='/js/price.js')
+    //script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top(style='background-color: #EDF2F7;')
+      .container
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          |
+          a.navbar-brand(href='/')
+            img(style="margin-top:-12px;" src='/siteicon.png',width='42', height='42')
+            //img(src='url(" + blockies.create({ seed:"aaaa" ,size: 8,scale: 16}).toDataURL()+")')
+        #navbar.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li
+              a(href='/tx/pending') Pending Tx
+            li
+              //a(href='http://stuff.cuppadev.co.uk/nuko-report.html') Rich List
+              a(href='/accounts') Accounts
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Tools
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='/tx/submit') Submit Tx
+                li
+                  a(href='/contract/verify') Verify Contract
+                li
+                  a(href='/signature/verify') Verify Signature
+                li
+                  a(href='/api') API
+                li
+                  a(href='https://ellaism.github.io/ellawallet/') Web Wallet
+                li
+                  a(href='https://stats.ellaism.org/') Network Stats
+                li
+                  a(href='https://github.com/ellaism-io/ellagem') Ellagem
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+                | Pools
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href='https://pool.ellaism.org/') Dev Pool
+                li
+                  a(href='http://ella.pool.sexy/#/') Pool Sexy
+                li
+                  a(href='http://ella.minerpool.net/') MinerPool
+                li
+                  a(href='http://ella.cryptobitpool.eu/') Cryptobitpool
+                li
+                  a(href='https://pool.ellaism.io/') Ellaism.io
+                li
+                  a(href='http://ella.cryptopools.info/') Cryptopools
+                li
+                  a(href='https://ella.epool.io/') Epool.io
+                li
+                  a(href='http://ellaismpool.com/') ellaismpool
+                li
+                  a(href='https://ellaism.org/mining/') Full list
+
+
+          form.navbar-form.navbar-right(action="/search", method="POST")
+            .form-group
+              input.form-control#search(type='text', placeholder='Block / Tx / Account', name='search')
+            |
+            button.btn.btn-success(type='submit') Submit
+    .container
+      block content
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    script.
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+
+    div.container
+      hr
+      footer
+        p
+          a(href="https://github.com/gobitfly/etherchain-light") Forked and Fixed bugs from Etherchain Light
+          |  | #{nodeStatus.version} | #{nodeStatus.nbrPeers} Peers connected
