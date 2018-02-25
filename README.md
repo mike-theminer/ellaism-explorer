@@ -1,7 +1,10 @@
 # Ellaism explorer 
 Fixed bugs from etherchain light. 
-Author @mike_theminer 
-Donation to me : 0x0574EC052413E50BC0b77A87Bd71C1ecb4915af7
+
+Author @mike_theminer.
+
+Donation to me: 0x0574EC052413E50BC0b77A87Bd71C1ecb4915af7
+
 ### Todo:
 * Rich list
 * Fast retrieval of full account history 
